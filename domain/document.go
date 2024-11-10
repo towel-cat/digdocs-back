@@ -16,9 +16,9 @@ type Document struct {
 }
 
 type DocumentRepository interface {
-	CreateDocument(ctx context.Context, document *Document) (*Document, error)
-	GetDocument(ctx context.Context, id uint64) (*Document, error)
+	CreateDocument(ctx context.Context, document Document) (Document, error)
+	GetDocument(ctx context.Context, id uint64) (Document, error)
 	GetDocuments(ctx context.Context) ([]Document, error)
-	UpdateDocument(ctx context.Context, document *Document) (*Document, error)
+	UpdateDocument(ctx context.Context, document Document) (Document, error)
 	DeleteDocument(ctx context.Context, id uint64) error
 }
