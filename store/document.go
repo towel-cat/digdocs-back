@@ -9,15 +9,8 @@ import (
 )
 
 const (
-	// TODO: попробовать *
 	sqlDocumentSelect = `
-SELECT  id,
-		name,
-		mime,
-		is_file,
-		is_public,
-		modified,
-		created
+SELECT *
 FROM documents
 `
 	sqlDocumentInsert = `
